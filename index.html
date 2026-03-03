@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ремонт квартир — Благовещенск | Быстро и Качественно</title>
+  <meta name="description" content="Профессиональный ремонт квартир в Благовещенске. Капитальный, косметический, отделочные работы. Бесплатная смета и консультация." />
+  <style>
+    :root{--accent:#0078d7;--bg:#f7f9fb;--card:#ffffff;--text:#1f2937}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text);}
+    .container{max-width:1000px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#00b4ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+    h1{margin:0;font-size:1.6rem}
+    p.lead{margin:8px 0 0;color:#475569}
+    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;margin-top:18px}
+    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+    .btn{display:inline-block;padding:12px 18px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
+    .service{padding:16px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);text-align:center}
+    footer{margin-top:28px;padding:18px 0;text-align:center;color:#64748b;font-size:0.9rem}
+    @media (max-width:800px){.hero{grid-template-columns:1fr;}.services{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">Р</div>
+        <div>
+          <h1>Ремонт квартир — Благовещенск</h1>
+          <p class="lead">Надёжно. Быстро. С гарантией.</p>
+        </div>
+      </div>
+      <div>
+        <div style="text-align:right">
+          <div style="font-weight:700">Звоните сейчас</div>
+          <a href="tel:+79141234567" style="color:var(--accent);text-decoration:none;font-weight:700">+7 (914) 123-45-67</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="card">
+          <h2>Качественный ремонт под ключ в Благовещенске</h2>
+          <p>Мы выполняем косметический, капитальный ремонт, отделочные и инженерные работы с соблюдением сроков и прозрачной сметой. Гарантия на все виды работ.</p>
+          <ul>
+            <li>Бесплатный выезд и замер по городу</li>
+            <li>Работаем с договором и актами</li>
+            <li>Примеры работ и отзывы — по запро��у</li>
+          </ul>
+          <p style="margin-top:12px"><a class="btn" href="tel:+79141234567">Заказать консультацию</a></p>
+        </div>
+
+        <div class="services" style="margin-top:12px">
+          <div class="service">
+            <strong>Косметический ремонт</strong>
+            <div style="margin-top:8px;color:#6b7280">Покраска, шпаклёвка, замена напольного покрытия</div>
+          </div>
+          <div class="service">
+            <strong>Капитальный ремонт</strong>
+            <div style="margin-top:8px;color:#6b7280">Перепланировка, замена инженерии, черновые работы</div>
+          </div>
+          <div class="service">
+            <strong>Сантехника и электрика</strong>
+            <div style="margin-top:8px;color:#6b7280">Проводка, розетки, разводка, монтаж сантехники</div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card">
+          <h3>Быстрая заявка</h3>
+          <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.');" aria-label="Заявка на ремонт">
+            <div style="margin-bottom:8px"><input required placeholder="Имя" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6" /></div>
+            <div style="margin-bottom:8px"><input required placeholder="Телефон" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6" /></div>
+            <div style="margin-bottom:8px"><textarea placeholder="Кратко опишите задачy" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6"></textarea></div>
+            <div><button class="btn" type="submit">Отправить заявку</button></div>
+          </form>
+          <p style="font-size:0.9rem;color:#64748b;margin-top:12px">Работаем по договору. Выезд и смета бесплатно по Благовещенску.</p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>
+      <div>📍 Благовещенск · © 2026 Ремонт квартир — Благовещенск</div>
+      <div style="margin-top:6px">Телефон: <a href="tel:+79141234567" style="color:var(--accent);text-decoration:none">+7 (914) 123-45-67</a></div>
+    </footer>
+  </div>
+</body>
+</html>
