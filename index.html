@@ -3,92 +3,210 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ремонт квартир — Благовещенск | Быстро и Качественно</title>
-  <meta name="description" content="Профессиональный ремонт квартир в Благовещенске. Капитальный, косметический, отделочные работы. Бесплатная смета и консультация." />
+  <title>Ремонт квартир — Благовещенск | Профессионально</title>
+  <meta name="description" content="Профессиональный ремонт квартир в Благовещенске: капитальный, косметический, отделочные работы. Гарантия, договор, смета." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--accent:#0078d7;--bg:#f7f9fb;--card:#ffffff;--text:#1f2937}
+    :root{
+      --bg: #0b1020;
+      --card:#0f1724;
+      --muted:#98a0b3;
+      --accent:#ff6b35;
+      --accent-2:#7c3aed;
+      --glass: rgba(255,255,255,0.04);
+      --text:#e6eef8;
+      --success:#16a34a;
+    }
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:var(--bg); color:var(--text);}
-    .container{max-width:1000px;margin:0 auto;padding:24px}
-    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
-    .brand{display:flex;gap:12px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#00b4ff);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
-    h1{margin:0;font-size:1.6rem}
-    p.lead{margin:8px 0 0;color:#475569}
-    .hero{display:grid;grid-template-columns:1fr 320px;gap:24px;align-items:center;margin-top:18px}
-    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
-    .btn{display:inline-block;padding:12px 18px;background:var(--accent);color:#fff;border-radius:8px;text-decoration:none;font-weight:600}
-    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-    .service{padding:16px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);text-align:center}
-    footer{margin-top:28px;padding:18px 0;text-align:center;color:#64748b;font-size:0.9rem}
-    @media (max-width:800px){.hero{grid-template-columns:1fr;}.services{grid-template-columns:1fr}}
+    html,body{height:100%;}
+    body{margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:var(--text);background:linear-gradient(180deg,var(--bg) 0%, #06070b 100%);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+
+    .wrap{max-width:1200px;margin:0 auto;padding:24px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:24px;box-shadow:0 6px 24px rgba(124,58,237,0.18)}
+    .brand h1{margin:0;font-size:1.1rem}
+    .tag{color:var(--muted);font-size:0.9rem}
+
+    nav{display:flex;align-items:center;gap:12px}
+    .cta{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:0 8px 30px rgba(124,58,237,0.12)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.04);padding:28px;border-radius:16px;backdrop-filter: blur(6px)}
+    h2{margin:0;font-size:1.8rem}
+    p.lead{color:var(--muted);margin-top:8px;line-height:1.5}
+
+    .features{display:flex;gap:12px;margin-top:18px}
+    .feature{flex:1;padding:14px;border-radius:12px;background:var(--card);border:1px solid rgba(255,255,255,0.03);}
+    .feature strong{display:block;color:#fff}
+    .small{font-size:0.9rem;color:var(--muted)}
+
+    /* Sidebar form */
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    form input, form textarea{width:100%;padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);outline:none}
+    form input::placeholder, form textarea::placeholder{color:rgba(230,238,248,0.45)}
+    .btn-primary{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border:none;font-weight:700;cursor:pointer}
+
+    /* Services grid */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+    .service{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
+    .service h4{margin:0 0 8px}
+
+    /* Gallery + testimonials */
+    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:22px}
+    .photo{height:120px;border-radius:10px;background-size:cover;background-position:center;border:1px solid rgba(255,255,255,0.04)}
+
+    .testimonials{margin-top:22px}
+    .testimonial{padding:16px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid rgba(255,255,255,0.03);margin-bottom:12px}
+
+    footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:0.9rem;text-align:center}
+
+    /* Mobile adjustments */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr 360px}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+      .services{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:620px){
+      .wrap{padding:18px}
+      header{flex-direction:column;align-items:flex-start;gap:12px}
+      .hero{grid-template-columns:1fr;}
+      nav{width:100%;display:flex;justify-content:space-between}
+      .hero-card{padding:18px}
+      .hero-card h2{font-size:1.4rem}
+      .services{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr}
+      .photo{height:160px}
+      /* sticky CTA for phones */
+      .mobile-cta{position:fixed;left:16px;right:16px;bottom:18px;z-index:60;display:flex;justify-content:center}
+      .mobile-cta .btn-primary{width:100%;border-radius:12px;padding:14px}
+    }
+
+    /* Accessibility focus styles */
+    a:focus, button:focus, input:focus, textarea:focus{box-shadow:0 0 0 3px rgba(124,58,237,0.18);outline:none}
+
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="wrap">
     <header>
       <div class="brand">
         <div class="logo">Р</div>
         <div>
           <h1>Ремонт квартир — Благовещенск</h1>
-          <p class="lead">Надёжно. Быстро. С гарантией.</p>
+          <div class="tag">Профессионально · С гарантиями · Работаем по договору</div>
         </div>
       </div>
-      <div>
-        <div style="text-align:right">
-          <div style="font-weight:700">Звоните сейчас</div>
-          <a href="tel:+79141234567" style="color:var(--accent);text-decoration:none;font-weight:700">+7 (914) 123-45-67</a>
-        </div>
-      </div>
+
+      <nav>
+        <div class="tag">📞 <a href="tel:+79141234567" style="color:var(--text);text-decoration:none;font-weight:700">+7 (914) 123-45-67</a></div>
+        <a class="cta" href="#contact">Заказать</a>
+      </nav>
     </header>
 
-    <section class="hero">
-      <div>
-        <div class="card">
-          <h2>Качественный ремонт под ключ в Благовещенске</h2>
-          <p>Мы выполняем косметический, капитальный ремонт, отделочные и инженерные работы с соблюдением сроков и прозрачной сметой. Гарантия на все виды работ.</p>
-          <ul>
-            <li>Бесплатный выезд и замер по городу</li>
-            <li>Работаем с договором и актами</li>
-            <li>Примеры работ и отзывы — по запро��у</li>
-          </ul>
-          <p style="margin-top:12px"><a class="btn" href="tel:+79141234567">Заказать консультацию</a></p>
+    <main class="hero">
+      <section class="hero-card">
+        <h2>Ремонт «под ключ» в Благовещенске — от замера до приёма работ</h2>
+        <p class="lead">Делаем качественно, в срок и по прозрачной смете. Опытная бригада, гарантия до 3 лет, официальные документы и акты приёма-передачи.</p>
+
+        <div class="features" aria-hidden>
+          <div class="feature">
+            <strong>Бесплатный выезд</strong>
+            <div class="small">Замер и консультация по городу</div>
+          </div>
+          <div class="feature">
+            <strong>Под ключ</strong>
+            <div class="small">От демонтажа до финальной уборки</div>
+          </div>
+          <div class="feature">
+            <strong>Гарантии</strong>
+            <div class="small">Официальный договор и гарантийный срок</div>
+          </div>
         </div>
 
-        <div class="services" style="margin-top:12px">
-          <div class="service">
-            <strong>Косметический ремонт</strong>
-            <div style="margin-top:8px;color:#6b7280">Покраска, шпаклёвка, замена напольного покрытия</div>
+        <div class="services" role="list">
+          <div class="service" role="listitem">
+            <h4>Косметический ремонт</h4>
+            <div class="small">Шпатлёвка, покраска, натяжные потолки, ламинат</div>
           </div>
-          <div class="service">
-            <strong>Капитальный ремонт</strong>
-            <div style="margin-top:8px;color:#6b7280">Перепланировка, замена инженерии, черновые работы</div>
+          <div class="service" role="listitem">
+            <h4>Капитальный ремонт</h4>
+            <div class="small">Перепланировка, выравнивание стен, инженерия</div>
           </div>
-          <div class="service">
-            <strong>Сантехника и электрика</strong>
-            <div style="margin-top:8px;color:#6b7280">Проводка, розетки, разводка, монтаж сантехники</div>
+          <div class="service" role="listitem">
+            <h4>Сантехника и электрика</h4>
+            <div class="small">Проект, замена, монтаж, проверка безопасности</div>
           </div>
         </div>
-      </div>
+
+        <div class="gallery" aria-label="Примеры работ">
+          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1598300051229-0b8d1e1b6f3f?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=0a3d3f6f2a5c8c3e');"></div>
+          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=4d4a4b2c8b4d2c58');"></div>
+          <div class="photo" style="background-image:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=5e8c8f1b9c2a4d5f');"></div>
+        </div>
+
+        <div class="testimonials">
+          <div class="testimonial">
+            <strong>Анна, Благовещенск</strong>
+            <div class="small">«Ремонт сделали аккуратно и быстро. Все по договору, дополнительные работы согласовали отдельно. Рекомендую.»</div>
+          </div>
+          <div class="testimonial">
+            <strong>Игорь</strong>
+            <div class="small">«Отличная команда — все в срок. Мастера вежливые, убрали после себя. Отличный результат.»</div>
+          </div>
+        </div>
+      </section>
 
       <aside>
-        <div class="card">
+        <div class="card" id="contact">
           <h3>Быстрая заявка</h3>
-          <form onsubmit="event.preventDefault(); alert('Спасибо! Мы свяжемся с вами в ближайшее время.');" aria-label="Заявка на ремонт">
-            <div style="margin-bottom:8px"><input required placeholder="Имя" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6" /></div>
-            <div style="margin-bottom:8px"><input required placeholder="Телефон" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6" /></div>
-            <div style="margin-bottom:8px"><textarea placeholder="Кратко опишите задачy" style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef6"></textarea></div>
-            <div><button class="btn" type="submit">Отправить заявку</button></div>
+          <p class="small">Оставьте контакт — мы свяжемся и бесплатно приедем для замера.</p>
+          <form onsubmit="event.preventDefault(); handleForm(event)">
+            <label class="small" for="name">Имя</label>
+            <input id="name" name="name" placeholder="Ваше имя" required />
+
+            <label class="small" for="phone">Телефон</label>
+            <input id="phone" name="phone" placeholder="Телефон" required />
+
+            <label class="small" for="notes">Кратко, что нужно</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Например: косметический ремонт 2-х комнатной квартиры" required></textarea>
+
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <button class="btn-primary" type="submit">Отправить заявку</button>
+              <a href="tel:+79141234567" class="cta" style="align-self:center">Позвонить</a>
+            </div>
+
+            <div style="margin-top:10px;font-size:0.85rem;color:var(--muted)">Нажимая «Отправить», вы соглашаетесь на обработку данных. Мы используем данные только для связи по заявке.</div>
           </form>
-          <p style="font-size:0.9rem;color:#64748b;margin-top:12px">Работаем по договору. Выезд и смета бесплатно по Благовещенску.</p>
         </div>
       </aside>
-    </section>
+    </main>
+
+    <div class="mobile-cta" aria-hidden>
+      <a class="btn-primary" href="tel:+79141234567">Позвонить — +7 (914) 123-45-67</a>
+    </div>
 
     <footer>
       <div>📍 Благовещенск · © 2026 Ремонт квартир — Благовещенск</div>
-      <div style="margin-top:6px">Телефон: <a href="tel:+79141234567" style="color:var(--accent);text-decoration:none">+7 (914) 123-45-67</a></div>
+      <div style="margin-top:6px">Телефон: <a href="tel:+79141234567" style="color:var(--text);text-decoration:none">+7 (914) 123-45-67</a></div>
     </footer>
   </div>
+
+  <script>
+    function handleForm(e){
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const notes = document.getElementById('notes').value.trim();
+      if(!name||!phone) return alert('Пожалуйста, заполните имя и телефон');
+      // Простая демонстрация: в реальном проекте отправьте на сервер или в Google Forms / API
+      alert('Спасибо, ' + name + '! Мы свяжемся с вами по ' + phone + ' в ближайшее время.');
+      e.target.reset();
+    }
+  </script>
 </body>
 </html>
